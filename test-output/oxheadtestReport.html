@@ -1,0 +1,4199 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Oxhead_excel report</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Functional report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Apr 6, 2022 11:59:15 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='92.793%'><span class='strong'>103</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='7.207%'>8</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='81.102%'><span class='strong'>103</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='18.898%'>24</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_Register_with_valid_Email</span>
+						<span class='test-time'>Apr 6, 2022 11:59:37 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 11:59:37 AM</span>
+	<span class='label end-time'>Apr 6, 2022 11:59:48 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+663ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:59:48 AM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_Register_with_valid_Email</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_Register_with_valid_Email</span>
+						<span class='test-time'>Apr 6, 2022 12:00:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:00:04 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:00:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+390ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:00:10 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_Register_with_valid_Email</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_Register_with_valid_Email</span>
+						<span class='test-time'>Apr 6, 2022 12:00:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:00:32 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:00:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+569ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:00:42 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_Register_with_valid_Email</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_Register_with_valid_Email</span>
+						<span class='test-time'>Apr 6, 2022 12:00:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:00:58 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:01:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+193ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:11 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_Register_with_valid_Email</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_login_with_google</span>
+						<span class='test-time'>Apr 6, 2022 12:01:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:01:27 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:01:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+918ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:32 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_login_with_google</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_login_with_Facebook</span>
+						<span class='test-time'>Apr 6, 2022 12:01:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:01:50 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:01:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+698ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:55 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_login_with_Facebook</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>click_On_Remeber_Me_CheckBox</span>
+						<span class='test-time'>Apr 6, 2022 12:02:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:02:12 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:02:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+121ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:02:26 PM</td>
+					<td class='step-details'>PASSED IS  click_On_Remeber_Me_CheckBox</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>click_On_Lost_Your_Password_Link</span>
+						<span class='test-time'>Apr 6, 2022 12:02:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:02:44 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:02:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+864ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:02:51 PM</td>
+					<td class='step-details'>PASSED IS  click_On_Lost_Your_Password_Link</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>click_On_Create_An_Account_Link</span>
+						<span class='test-time'>Apr 6, 2022 12:03:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:03:08 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:03:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+29ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:03:14 PM</td>
+					<td class='step-details'>PASSED IS  click_On_Create_An_Account_Link</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>click_On_Cross_Mark_Button</span>
+						<span class='test-time'>Apr 6, 2022 12:03:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:03:29 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:03:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+364ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:03:30 PM</td>
+					<td class='step-details'>PASSED IS  click_On_Cross_Mark_Button</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>click_On_Close_Button</span>
+						<span class='test-time'>Apr 6, 2022 12:03:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:03:49 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:03:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+176ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:03:49 PM</td>
+					<td class='step-details'>PASSED IS  click_On_Close_Button</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Ablet_To_Do_SignUp_With_Valid_Email_Address</span>
+						<span class='test-time'>Apr 6, 2022 12:04:06 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:04:06 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:04:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+753ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:04:15 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Ablet_To_Do_SignUp_With_Valid_Email_Address</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_should_be_able_to_see_the_About_US_page</span>
+						<span class='test-time'>Apr 6, 2022 12:04:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:04:31 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:04:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+803ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:04:34 PM</td>
+					<td class='step-details'>PASSED IS  Customer_should_be_able_to_see_the_About_US_page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_should_be_able_to_click_on_all_the_sociallinks</span>
+						<span class='test-time'>Apr 6, 2022 12:04:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:04:46 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:05:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+830ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:05:03 PM</td>
+					<td class='step-details'>PASSED IS  Customer_should_be_able_to_click_on_all_the_sociallinks</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_valid_details_and_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:05:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:05:20 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:05:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+499ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:05:35 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_valid_details_and_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:05:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:05:51 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:05:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+548ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:05:59 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:06:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:06:16 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:06:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+825ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:06:25 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:06:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:06:43 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:06:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+932ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:06:52 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:07:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:07:14 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:07:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+66ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:07:24 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:07:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:07:40 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:07:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+811ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:07:49 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:08:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:08:07 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:08:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+484ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:08:15 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:08:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:08:33 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:08:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+447ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:08:42 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:09:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:09:01 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:09:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+777ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:09:09 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</span>
+						<span class='test-time'>Apr 6, 2022 12:09:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:09:28 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:09:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+903ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:09:36 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_fill_invalid_details_for_ContactUSPage_and_not_able_to_see_Thanku_for_ur_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>valid_details_and_user_is_able_to_click_on_getaquote_link</span>
+						<span class='test-time'>Apr 6, 2022 12:09:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:09:51 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:10:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+851ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:10:00 PM</td>
+					<td class='step-details'>PASSED IS  valid_details_and_user_is_able_to_click_on_getaquote_link</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_enter_products_in_the_Search_for_Products_text_box</span>
+						<span class='test-time'>Apr 6, 2022 12:10:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:10:13 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:10:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:10:39 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_enter_products_in_the_Search_for_Products_text_box</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_No_products_were_found_matching_your_selection_message</span>
+						<span class='test-time'>Apr 6, 2022 12:10:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:10:53 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:11:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+295ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:11:08 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_No_products_were_found_matching_your_selection_message</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>select_Allproducts_option_in_the_select_category</span>
+						<span class='test-time'>Apr 6, 2022 12:11:24 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:11:24 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:11:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+228ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:11:42 PM</td>
+					<td class='step-details'>PASSED IS  select_Allproducts_option_in_the_select_category</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>select_Gold_option_in_the_select_category</span>
+						<span class='test-time'>Apr 6, 2022 12:11:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:11:59 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:12:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+628ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:12:18 PM</td>
+					<td class='step-details'>PASSED IS  select_Gold_option_in_the_select_category</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>select_Membership_option_in_the_select_category</span>
+						<span class='test-time'>Apr 6, 2022 12:12:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:12:36 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:12:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+771ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:12:59 PM</td>
+					<td class='step-details'>PASSED IS  select_Membership_option_in_the_select_category</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>select_Palladium_option_in_the_select_category</span>
+						<span class='test-time'>Apr 6, 2022 12:13:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:13:14 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:13:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+338ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:13:32 PM</td>
+					<td class='step-details'>PASSED IS  select_Palladium_option_in_the_select_category</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>select_Platinum_option_in_the_select_category</span>
+						<span class='test-time'>Apr 6, 2022 12:13:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:13:44 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:14:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+178ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:14:05 PM</td>
+					<td class='step-details'>PASSED IS  select_Platinum_option_in_the_select_category</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>select_Silver_option_in_the_select_category</span>
+						<span class='test-time'>Apr 6, 2022 12:14:23 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:14:23 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:14:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+916ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:14:39 PM</td>
+					<td class='step-details'>PASSED IS  select_Silver_option_in_the_select_category</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>select_Blank_option_in_the_select_category</span>
+						<span class='test-time'>Apr 6, 2022 12:14:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:14:55 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:15:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+719ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:15:13 PM</td>
+					<td class='step-details'>PASSED IS  select_Blank_option_in_the_select_category</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>see_The_Bar_In_The_Palladium_Bullion</span>
+						<span class='test-time'>Apr 6, 2022 12:15:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:15:31 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:15:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+461ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:15:53 PM</td>
+					<td class='step-details'>PASSED IS  see_The_Bar_In_The_Palladium_Bullion</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_select_the_product_and_Add_product_to_Cart</span>
+						<span class='test-time'>Apr 6, 2022 12:16:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:16:09 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:16:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+964ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:16:38 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_select_the_product_and_Add_product_to_Cart</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_click_on_the_viewcart_button</span>
+						<span class='test-time'>Apr 6, 2022 12:16:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:16:58 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:17:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 48s+694ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:17:47 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_click_on_the_viewcart_button</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_click_on_update_cart_button</span>
+						<span class='test-time'>Apr 6, 2022 12:18:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:18:03 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:18:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+675ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:18:43 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_click_on_update_cart_button</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_click_on_the_Proceed_to_Checkout_button</span>
+						<span class='test-time'>Apr 6, 2022 12:19:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:19:01 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:19:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 51s+164ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:19:52 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_click_on_the_Proceed_to_Checkout_button</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_Wishlist_page</span>
+						<span class='test-time'>Apr 6, 2022 12:20:06 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:20:06 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:20:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 49s+840ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:20:55 PM</td>
+					<td class='step-details'>FAILED IS  Customer_is_able_to_see_Wishlist_page</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:20:55 PM</td>
+					<td class='step-details'>FAILED IS  org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (ef45928273bd9500c8093205aa0e3e37)] -> xpath: //div[3]//div[2]//div//ul//li[7]//a] (tried for 25 second(s) with 1 milliseconds interval)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LMCLT017', ip: '192.168.0.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\BALARA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57332}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57332/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ef45928273bd9500c8093205aa0e3e37</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:20:55 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@34d484c</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_Wishlist_page.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_Wishlist_page.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_Wishlist_page.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_Wishlist_page2</span>
+						<span class='test-time'>Apr 6, 2022 12:21:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:21:10 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:21:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+107ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:21:43 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_Wishlist_page2</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='42'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_should_be_able_to_see_any_category_shoul_not_be_there_in_the_wishlist_page</span>
+						<span class='test-time'>Apr 6, 2022 12:22:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:22:03 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:22:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+429ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:22:20 PM</td>
+					<td class='step-details'>PASSED IS  Customer_should_be_able_to_see_any_category_shoul_not_be_there_in_the_wishlist_page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_checkoutdetails_page</span>
+						<span class='test-time'>Apr 6, 2022 12:22:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:22:38 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:23:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+481ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:23:18 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_checkoutdetails_page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_Address_validated_option_with_valid_data</span>
+						<span class='test-time'>Apr 6, 2022 12:23:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:23:40 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:24:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 49s+811ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:24:30 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_Address_validated_option_with_valid_data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='45'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_Address_validated_option_with_valid_data</span>
+						<span class='test-time'>Apr 6, 2022 12:24:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:24:43 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:25:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+810ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:25:36 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_Address_validated_option_with_valid_data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='46'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_Address_validated_option_with_valid_data</span>
+						<span class='test-time'>Apr 6, 2022 12:25:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:25:53 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:26:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 47s+660ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:26:41 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_Address_validated_option_with_valid_data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='47'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_Address_validated_option_with_valid_data</span>
+						<span class='test-time'>Apr 6, 2022 12:26:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:26:55 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:27:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+731ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:40 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_Address_validated_option_with_valid_data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>user_is_able_to_fill_valid_details_in_Billingaddress_and_able_to_delete_the_billingaddress</span>
+						<span class='test-time'>Apr 6, 2022 12:27:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:27:56 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:28:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+381ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:35 PM</td>
+					<td class='step-details'>PASSED IS  user_is_able_to_fill_valid_details_in_Billingaddress_and_able_to_delete_the_billingaddress</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='49'>
+					<div class='test-heading'>
+						<span class='test-name'>user_is_able_to_edit_the_billingaddress</span>
+						<span class='test-time'>Apr 6, 2022 12:28:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:28:55 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:29:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+669ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:17 PM</td>
+					<td class='step-details'>PASSED IS  user_is_able_to_edit_the_billingaddress</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='50'>
+					<div class='test-heading'>
+						<span class='test-name'>user_is_able_to_fill_valid_details_in_shippingaddress_and_able_to_delete_shippingaddress_details</span>
+						<span class='test-time'>Apr 6, 2022 12:29:38 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:29:38 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:30:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 46s+744ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:30:24 PM</td>
+					<td class='step-details'>FAILED IS  user_is_able_to_fill_valid_details_in_shippingaddress_and_able_to_delete_shippingaddress_details</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:30:24 PM</td>
+					<td class='step-details'>FAILED IS  org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="form_option_ship_..." data-id="145" data-eid-ship="231">edit</button> is not clickable at point (1071, 10). Other element would receive the click: <div class="wd-header-nav wd-header-main-nav text-left" role="navigation">...</div>
+  (Session info: chrome=99.0.4844.84)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LMCLT017', ip: '192.168.0.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [076f2db918b288b00d3c2e7e21b4695b, clickElement {id=2121bf88-b951-4c81-bfbf-c18baa0d19b3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\BALARA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58110}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58110/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (076f2db918b288b00d3c2e7e21b4695b)] -> xpath: //button[@class="form_option_ship_edit"][1]]
+Session ID: 076f2db918b288b00d3c2e7e21b4695b</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:30:25 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@3757ab2f</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\user_is_able_to_fill_valid_details_in_shippingaddress_and_able_to_delete_shippingaddress_details.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\user_is_able_to_fill_valid_details_in_shippingaddress_and_able_to_delete_shippingaddress_details.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\user_is_able_to_fill_valid_details_in_shippingaddress_and_able_to_delete_shippingaddress_details.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='51'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_do_the_payment_method_process</span>
+						<span class='test-time'>Apr 6, 2022 12:30:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:30:44 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:31:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+39ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:18 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_do_the_payment_method_process</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='52'>
+					<div class='test-heading'>
+						<span class='test-name'>customer_Is_Able_To_See_The_OrderDetails</span>
+						<span class='test-time'>Apr 6, 2022 12:31:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:31:30 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:31:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+422ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:50 PM</td>
+					<td class='step-details'>PASSED IS  customer_Is_Able_To_See_The_OrderDetails</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='53'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_Do_Logout</span>
+						<span class='test-time'>Apr 6, 2022 12:32:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:32:04 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:32:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+34ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:27 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_Do_Logout</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='54'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_Logout_From_The_Application</span>
+						<span class='test-time'>Apr 6, 2022 12:32:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:32:40 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:32:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+109ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:58 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_Logout_From_The_Application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='55'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_valid_orderid_and_billingmail_and_able_to_see_contactus_page_and_fill_with_valid_details</span>
+						<span class='test-time'>Apr 6, 2022 12:33:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:33:11 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:33:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+212ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:39 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_valid_orderid_and_billingmail_and_able_to_see_contactus_page_and_fill_with_valid_details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='56'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:33:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:33:53 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:34:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+655ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:11 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='57'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:34:24 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:34:24 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:34:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+99ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:40 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='58'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:34:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:34:53 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:35:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+841ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:35:09 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='59'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:35:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:35:21 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:35:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+295ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:35:37 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='60'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:35:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:35:49 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:36:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+100ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:05 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='61'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:36:17 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:36:17 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:36:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+86ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:33 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='62'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:36:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:36:48 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:37:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+615ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:04 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='63'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_invalid_orderid_and_valid_billing_mail</span>
+						<span class='test-time'>Apr 6, 2022 12:37:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:37:18 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:37:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+360ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:36 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_invalid_orderid_and_valid_billing_mail</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='64'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</span>
+						<span class='test-time'>Apr 6, 2022 12:37:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:37:48 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:38:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+356ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:07 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='65'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</span>
+						<span class='test-time'>Apr 6, 2022 12:38:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:38:19 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:38:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+87ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:41 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='66'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</span>
+						<span class='test-time'>Apr 6, 2022 12:38:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:38:54 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:39:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+261ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:39:15 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='67'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</span>
+						<span class='test-time'>Apr 6, 2022 12:39:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:39:31 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:39:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+549ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:39:51 PM</td>
+					<td class='step-details'>PASSED IS  verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='68'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</span>
+						<span class='test-time'>Apr 6, 2022 12:40:06 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:40:06 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:40:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+551ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:40:35 PM</td>
+					<td class='step-details'>FAILED IS  verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:40:35 PM</td>
+					<td class='step-details'>FAILED IS  java.lang.AssertionError: expected [One or more fields have an error. Please check and try again.] but found [Thank you for your message. It has been sent.]</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:40:35 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@556ddf48</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_with_valid_order_id_and_billing_mail_and_able_to_see_contactuspage_and_fill_with_invalid_name_and_remaining_all_are_valid.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='69'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_customer_is_able_to_see_trackanorder_logo_and_oxheadlogo_same_or_not</span>
+						<span class='test-time'>Apr 6, 2022 12:40:48 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:40:48 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:40:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+25ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:40:58 PM</td>
+					<td class='step-details'>FAILED IS  verify_customer_is_able_to_see_trackanorder_logo_and_oxheadlogo_same_or_not</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:40:58 PM</td>
+					<td class='step-details'>FAILED IS  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[1]/div/div/div/div[1]/div/a/img"}
+  (Session info: chrome=99.0.4844.84)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LMCLT017', ip: '192.168.0.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [322214edb800dec24ec4fcf641e82bda, findElement {using=xpath, value=/html/body/div[1]/div[1]/div/div/div/div[1]/div/a/img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\BALARA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59358}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59358/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 322214edb800dec24ec4fcf641e82bda</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:40:58 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@a0af49e</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_customer_is_able_to_see_trackanorder_logo_and_oxheadlogo_same_or_not.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_customer_is_able_to_see_trackanorder_logo_and_oxheadlogo_same_or_not.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_customer_is_able_to_see_trackanorder_logo_and_oxheadlogo_same_or_not.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='70'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_The_AllProducts_On_Browse_Catagories</span>
+						<span class='test-time'>Apr 6, 2022 12:41:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:41:13 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:41:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+85ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:30 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_The_AllProducts_On_Browse_Catagories</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='71'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_The_Gold_On_Browse_Catagories</span>
+						<span class='test-time'>Apr 6, 2022 12:41:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:41:42 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:41:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+688ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:58 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_The_Gold_On_Browse_Catagories</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='72'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_The_Palladium_On_Browse_Catagories</span>
+						<span class='test-time'>Apr 6, 2022 12:42:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:42:10 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:42:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+496ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:26 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_The_Palladium_On_Browse_Catagories</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='73'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_The_Platinum_On_Browse_Catagories</span>
+						<span class='test-time'>Apr 6, 2022 12:42:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:42:38 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:42:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+894ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:54 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_The_Platinum_On_Browse_Catagories</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='74'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_The_Silver_On_Browse_Catagories</span>
+						<span class='test-time'>Apr 6, 2022 12:43:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:43:08 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:43:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+201ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:43:23 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_The_Silver_On_Browse_Catagories</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='75'>
+					<div class='test-heading'>
+						<span class='test-name'>customer_Is_Able_To_See_The_HomePage</span>
+						<span class='test-time'>Apr 6, 2022 12:43:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:43:35 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:43:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+958ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:43:47 PM</td>
+					<td class='step-details'>PASSED IS  customer_Is_Able_To_See_The_HomePage</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='76'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_sticky_header_is_fixed_at_that_place_it_is_comingdown</span>
+						<span class='test-time'>Apr 6, 2022 12:44:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:44:01 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:44:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+649ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:44:11 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_sticky_header_is_fixed_at_that_place_it_is_comingdown</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='77'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_The_NewArrivals_Page</span>
+						<span class='test-time'>Apr 6, 2022 12:44:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:44:25 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:44:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+812ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:44:41 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_The_NewArrivals_Page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='78'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_Silverbars</span>
+						<span class='test-time'>Apr 6, 2022 12:44:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:44:55 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:45:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 53s+121ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:45:49 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_Silverbars</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='79'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_silver_bulletts</span>
+						<span class='test-time'>Apr 6, 2022 12:46:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:46:03 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:46:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+612ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:15 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_silver_bulletts</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='80'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_silver_coins</span>
+						<span class='test-time'>Apr 6, 2022 12:46:30 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:46:30 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:47:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 46s+79ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:15 PM</td>
+					<td class='step-details'>FAILED IS  Customer_is_able_to_see_the_silver_coins</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:15 PM</td>
+					<td class='step-details'>FAILED IS  org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='summary-inner']//button[@name='add-to-cart']' (tried for 25 second(s) with 1 milliseconds interval)</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:16 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@20a5dc6</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_the_silver_coins.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_the_silver_coins.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_the_silver_coins.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='81'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_goldcoins</span>
+						<span class='test-time'>Apr 6, 2022 12:47:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:47:29 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:47:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+696ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:47:49 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_goldcoins</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='82'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_goldbars</span>
+						<span class='test-time'>Apr 6, 2022 12:48:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:48:03 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:48:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 47s+923ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:48:51 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_goldbars</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='83'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_usgold</span>
+						<span class='test-time'>Apr 6, 2022 12:49:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:49:03 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:49:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+505ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:14 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_usgold</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='84'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_canadiangold</span>
+						<span class='test-time'>Apr 6, 2022 12:49:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:49:26 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:49:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+557ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:36 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_canadiangold</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='85'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_Austraiangold</span>
+						<span class='test-time'>Apr 6, 2022 12:49:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:49:52 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:50:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+707ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:02 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_Austraiangold</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='86'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_Platinum_in_Other</span>
+						<span class='test-time'>Apr 6, 2022 12:50:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:50:15 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:50:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+910ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:36 PM</td>
+					<td class='step-details'>FAILED IS  Customer_is_able_to_see_the_Platinum_in_Other</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:36 PM</td>
+					<td class='step-details'>FAILED IS  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div[2]/div/div/div[5]/div[1]/div/a"}
+  (Session info: chrome=99.0.4844.84)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LMCLT017', ip: '192.168.0.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fa0600e6e02163fcbaaa2cd405c9a0d4, findElement {using=xpath, value=/html/body/div[1]/div[2]/div[2]/div/div/div[5]/div[1]/div/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\BALARA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60465}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60465/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fa0600e6e02163fcbaaa2cd405c9a0d4</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:36 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@38c8bed6</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_the_Platinum_in_Other.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_the_Platinum_in_Other.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_is_able_to_see_the_Platinum_in_Other.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='87'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_coins_supplies_page_in_Other</span>
+						<span class='test-time'>Apr 6, 2022 12:50:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:50:49 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:51:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+167ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:05 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_coins_supplies_page_in_Other</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='88'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_see_the_oxhead_merch_in_Other</span>
+						<span class='test-time'>Apr 6, 2022 12:51:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:51:21 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:51:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+835ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:35 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_see_the_oxhead_merch_in_Other</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='89'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Not_Able_To_See_Product_In_ShoppingCart_Page</span>
+						<span class='test-time'>Apr 6, 2022 12:51:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:51:49 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:52:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+718ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:05 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Not_Able_To_See_Product_In_ShoppingCart_Page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='90'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_Product_In_ShoppingCart_Page_From_NewArrivals_page</span>
+						<span class='test-time'>Apr 6, 2022 12:52:17 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:52:17 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:52:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+772ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:52 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_Product_In_ShoppingCart_Page_From_NewArrivals_page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='91'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_Product_In_ShoppingCart_Page</span>
+						<span class='test-time'>Apr 6, 2022 12:53:04 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:53:04 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:53:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 42s+659ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:53:47 PM</td>
+					<td class='step-details'>FAILED IS  Customer_Is_Able_To_See_Product_In_ShoppingCart_Page</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:53:47 PM</td>
+					<td class='step-details'>FAILED IS  org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //td[@class='product-name']' (tried for 25 second(s) with 1 milliseconds interval)</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:53:47 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@31ba2836</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_Is_Able_To_See_Product_In_ShoppingCart_Page.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_Is_Able_To_See_Product_In_ShoppingCart_Page.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\Customer_Is_Able_To_See_Product_In_ShoppingCart_Page.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='92'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_See_Shipping_And_Delivery_Page</span>
+						<span class='test-time'>Apr 6, 2022 12:53:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:53:59 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:54:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+718ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:32 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_See_Shipping_And_Delivery_Page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='93'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_able_To_Track_The_Cash_On_Delivery</span>
+						<span class='test-time'>Apr 6, 2022 12:54:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:54:52 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:55:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+57ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:13 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_able_To_Track_The_Cash_On_Delivery</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='94'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_customer_is_able_to_click_on_contactuspage_link_footersection</span>
+						<span class='test-time'>Apr 6, 2022 12:55:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:55:30 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:55:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+326ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:57 PM</td>
+					<td class='step-details'>PASSED IS  verify_customer_is_able_to_click_on_contactuspage_link_footersection_and_verify_able_to_redirect_contactuspage_Click_on_FAQlink_in_footersection_and_able_to_redirect_FAQpage_and_click_on_Contactlink_and_able_to_see_contactusPagelink</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='95'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_user_is_able_click_on_FAQ_button_and_able_to_see_contactUSPage_and_verify_with_invalid_name_remaining_all_are_validk</span>
+						<span class='test-time'>Apr 6, 2022 12:56:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:56:18 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:56:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+31ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:56:35 PM</td>
+					<td class='step-details'>FAILED IS  verify_user_is_able_click_on_FAQ_button_and_able_to_see_contactUSPage_and_verify_with_invalid_name_remaining_all_are_valid</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:56:35 PM</td>
+					<td class='step-details'>FAILED IS  org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="vc_tta-title-text">...</span> is not clickable at point (931, 546). Other element would receive the click: <span class="NormalTextRun SCXW214363955 BCX8" data-ccp-parastyle="heading 1">...</span>
+  (Session info: chrome=99.0.4844.84)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LMCLT017', ip: '192.168.0.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c387e06d6323a5c58378752db19b567f, clickElement {id=e470257d-bbe6-4062-8fcf-1bf9b894116a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\BALARA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61081/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (c387e06d6323a5c58378752db19b567f)] -> xpath: //span[text()='DO YOU OFFER FREE SHIPPING?']]
+Session ID: c387e06d6323a5c58378752db19b567f</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:56:35 PM</td>
+					<td class='step-details'>FAILED IS com.aventstack.extentreports.ExtentTest@5cb8ce2e</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_user_is_able_click_on_FAQ_button_and_able_to_see_contactUSPage_and_verify_with_invalid_name_remaining_all_are_valid.jpg 2022 04 06 12 15 31' width='10%' src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_user_is_able_click_on_FAQ_button_and_able_to_see_contactUSPage_and_verify_with_invalid_name_remaining_all_are_valid.jpg 2022 04 06 12 15 31' data-src='C:\Users\BalarajuGone\git\Envela\Envela\Screenshort\verify_user_is_able_click_on_FAQ_button_and_able_to_see_contactUSPage_and_verify_with_invalid_name_remaining_all_are_valid.jpg 2022 04 06 12 15 31'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='96'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</span>
+						<span class='test-time'>Apr 6, 2022 12:56:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:56:50 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:57:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+337ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:01 PM</td>
+					<td class='step-details'>PASSED IS  verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='97'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</span>
+						<span class='test-time'>Apr 6, 2022 12:57:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:57:16 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:57:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+300ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:26 PM</td>
+					<td class='step-details'>PASSED IS  verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='98'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</span>
+						<span class='test-time'>Apr 6, 2022 12:57:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:57:44 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:57:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+405ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:59 PM</td>
+					<td class='step-details'>PASSED IS  verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='99'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</span>
+						<span class='test-time'>Apr 6, 2022 12:58:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:58:21 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:58:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+394ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:32 PM</td>
+					<td class='step-details'>PASSED IS  verify_user_is_able_to_see_contactUSPage_and_verify_with_invalid_details</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='100'>
+					<div class='test-heading'>
+						<span class='test-name'>verify_user_is_able_to_see_PrivacyPolicyPage_and_Termsandconditions_page</span>
+						<span class='test-time'>Apr 6, 2022 12:58:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:58:46 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:58:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+409ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:58 PM</td>
+					<td class='step-details'>PASSED IS  verify_user_is_able_to_see_PrivacyPolicyPage_and_Termsandconditions_page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='101'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_Redirect_to_PrivacyPolicypage_and_Customer_is_able_to_redirect_to_Salestaxpage</span>
+						<span class='test-time'>Apr 6, 2022 12:59:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:59:18 PM</span>
+	<span class='label end-time'>Apr 6, 2022 12:59:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+39ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:59:39 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_Redirect_to_PrivacyPolicypage_and_Customer_is_able_to_redirect_to_Salestaxpage</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='102'>
+					<div class='test-heading'>
+						<span class='test-name'>redirect_to_Shippingdeliverypage_redirect_to_PaymentpolicyPage_Returnpolicypage_Redirect_to_TermsandConditionspage</span>
+						<span class='test-time'>Apr 6, 2022 12:59:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 12:59:58 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:00:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+295ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:14 PM</td>
+					<td class='step-details'>PASSED IS  redirect_to_Shippingdeliverypage_redirect_to_PaymentpolicyPage_Returnpolicypage_Redirect_to_TermsandConditionspage</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='103'>
+					<div class='test-heading'>
+						<span class='test-name'>user_is_able_to_fill_valid_details_in_shippingaddress_and_able_to_delete_shippingaddress_details</span>
+						<span class='test-time'>Apr 6, 2022 01:00:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:00:30 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:00:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+634ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:47 PM</td>
+					<td class='step-details'>PASSED IS  Redirect_to_the_Account_login_page_and_Trackanorderpage_pricealertspage_Aboutoxheadpage_oxheadblogpage_oxheadproductspage</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='104'>
+					<div class='test-heading'>
+						<span class='test-name'>user_is_able_to_fill_valid_details_in_shippingaddress_and_able_to_delete_shippingaddress_details</span>
+						<span class='test-time'>Apr 6, 2022 01:01:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:01:05 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:01:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+225ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:01:18 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_Redirect_to_the_Blogpage_Customer_is_able_to_Redirect_to_the_invest_in_guidepage_Customer_is_able_to_Redirect_to_the_Silverpricespage_goldpricespage_LocalDirectorypage_Coinvaluespage_Salestaxpage_Custumer_is_able_to_click_on_links_when_cursor_is_placed_on_the_words_itis_able_to_click_on_linkns_cursor_is_placed_outside</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='105'>
+					<div class='test-heading'>
+						<span class='test-name'>customer_Is_clicking_On_The_Shop_Now_Button_It_Has_To_Redirect_To_That_Particular_Page</span>
+						<span class='test-time'>Apr 6, 2022 01:01:39 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:01:39 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:02:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+378ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:20 PM</td>
+					<td class='step-details'>PASSED IS  customer_Is_clicking_On_The_Shop_Now_Button_It_Has_To_Redirect_To_That_Particular_Page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='106'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_Is_Able_To_click_On_The_Shop_Now_Button_It_Has_To_Redirect_To_That_Particular_Page</span>
+						<span class='test-time'>Apr 6, 2022 01:02:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:02:36 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:03:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+681ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:03:01 PM</td>
+					<td class='step-details'>PASSED IS  Customer_Is_Able_To_click_On_The_Shop_Now_Button_It_Has_To_Redirect_To_That_Particular_Page</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='107'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</span>
+						<span class='test-time'>Apr 6, 2022 01:03:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:03:18 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:03:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+614ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:03:25 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='108'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</span>
+						<span class='test-time'>Apr 6, 2022 01:03:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:03:41 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:03:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+953ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:03:48 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='109'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</span>
+						<span class='test-time'>Apr 6, 2022 01:04:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:04:03 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:04:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+864ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:10 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='110'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</span>
+						<span class='test-time'>Apr 6, 2022 01:04:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:04:28 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:04:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+334ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:34 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='111'>
+					<div class='test-heading'>
+						<span class='test-name'>Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</span>
+						<span class='test-time'>Apr 6, 2022 01:04:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022 01:04:54 PM</span>
+	<span class='label end-time'>Apr 6, 2022 01:05:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+898ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:05:05 PM</td>
+					<td class='step-details'>PASSED IS  Customer_is_able_to_login_with_Valid_Username_and_ValidPassword</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>111</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>127</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 6, 2022 11:59:15 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 6, 2022 01:05:06 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>1h 5m 50s+581ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Hostname</td>
+								<td>localhost</td>
+							</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows10</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 103,
+				failParent: 8,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 8,
+				
+				passChild: 103,
+				failChild: 24,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 24,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
